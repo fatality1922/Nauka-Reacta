@@ -1,14 +1,15 @@
 import React from 'react';
-import styles from './List.scss';
+import styles from './Hero.scss';
 
-class List extends React.Component {
+class Hero extends React.Component {
   render() {
     return (
       <header className={styles.component}>
-        <h2 className={styles.subtitle}> Rzeczy dfo roboty</h2>
+        <h2 className={styles.title}> Things to do</h2>
+        <img className={styles.image} src="http://uploads.kodilla.com/bootcamp/fer/11.react/space.png" alt ="obrazek"></img>
       </header>
     )
   }
 }
 
-export default List;
+export default Hero;
