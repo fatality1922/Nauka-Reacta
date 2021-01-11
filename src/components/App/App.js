@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './App.scss';
+import PropTypes from 'prop-types';
 //import List from '../List/List.js';
 //import Creator from '../Creator/Creator';
 
 
 class App extends React.Component {
   static propTypes = {
-    title: this.propTypes.node,
-    subtitle: this.propTypes.node,
+    title: PropTypes.node,
+    subtitle: PropTypes.node,
   }
   
   render() {
