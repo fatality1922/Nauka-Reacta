@@ -8,7 +8,6 @@ import { settings } from '../../data/dataStore';
 import Creator from '../Creator/Creator.js';
 import ReactHtmlParser from 'react-html-parser';
 
-
 class List extends React.Component {
 
   static propTypes = {
@@ -23,7 +22,6 @@ class List extends React.Component {
   }
 
   render() {
-
     const { title, image, description, columns, addColumn } = this.props;
 
     return (
@@ -35,12 +33,12 @@ class List extends React.Component {
           {ReactHtmlParser(description)}
         </div>
 
-
         <div className={styles.columns}>
           {columns.map(columnData => (
             <Column key={columnData.id} {...columnData} />
           ))}
         </div>
+        
 
         <div className={styles.creator}>
           <Creator text={settings.columnCreatorText} action={addColumn} />

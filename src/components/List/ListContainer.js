@@ -11,7 +11,7 @@ const mapStateToProps = (state, props) => ({
 const mapDispatchToProps = (dispatch, props) => ({
   addColumn: title => dispatch(createActionAddColumn({
     listId: props.id,
-    title,
+    title, //po co tak robic? tak samo, po co robic title:title?
   })),
 });
 
