@@ -1,19 +1,17 @@
 /* eslint-disable react/prop-types */
-// import React from 'react';
-// import styles from './Container.scss';
-// import PropTypes from 'prop-types';
-// import ReactHtmlParser from 'react-html-parser';
+import React from 'react';
+import styles from './Container.scss';
+import PropTypes from 'prop-types';
 
 
-// const Container = props => (
-//   <div className={styles.component}>
-//     {/* <h2 className={styles.title}> {ReactHtmlParser(props.titleText)}</h2> tu zmienic wnetrze diva
-//     <img className={styles.image} src={props.backgroudImage}></img> */}
-//   </div>
-// );
+const Container = (props) => (
+  <div className={styles.component}>
+    {props.children}
+  </div>
+);
 
-// Container.propTypes = {
-//   children: PropTypes.node.isRequired,
-// };
+Container.propTypes = {
+  children: PropTypes.node,
+};
 
-// export default Container;
+export default Container;
