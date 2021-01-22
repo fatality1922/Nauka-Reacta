@@ -13,7 +13,7 @@
     &:hover {
       color: $color-success;
     }
-    &:global(.active) {
+    &:global(.is-active) {
       color: $color-warning;
     }
   }

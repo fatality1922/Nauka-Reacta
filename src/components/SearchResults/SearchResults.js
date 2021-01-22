@@ -19,7 +19,11 @@ class SearchResults extends React.Component {
     icon: settings.defaultColumnIcon,
   }
 
-
+  componentDidMount() {
+    const {changeSearchString, searchString } = this.props;
+    changeSearchString(searchString);
+  }
+  
   render() {
     const { icon, cards, children} = this.props;
     return (
