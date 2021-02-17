@@ -14,6 +14,7 @@ class SearchResults extends React.Component {
     cards: PropTypes.array,
     children: PropTypes.node,
     searchString: PropTypes.string,
+    changeSearchString: PropTypes.func,
   }
   static defaultProps = {
     icon: settings.defaultColumnIcon,
