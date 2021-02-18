@@ -23,7 +23,6 @@ class Header extends React.Component {
             </nav>
           </div>
           <Search/>
-
         </Container>
       </header>
     );
