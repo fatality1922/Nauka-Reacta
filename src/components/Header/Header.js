@@ -12,10 +12,9 @@ class Header extends React.Component {
     return (
       <header className={styles.component}>
         <Container>
-          <Search/>
           <div className={styles.wrapper}>
             <Link to='/' className={styles.logo}>
-              <Icon name='angry' />
+              <Icon name='check-circle' />
             </Link>
             <nav>
               <NavLink exact to='/' activeClassName='is-active'>Home</NavLink>
@@ -23,6 +22,8 @@ class Header extends React.Component {
               <NavLink exact to='/faq' activeClassName='is-active'>FAQ</NavLink>
             </nav>
           </div>
+          <Search/>
+
         </Container>
       </header>
     );
