@@ -17,7 +17,7 @@ export const createAction_changeSearchString = payload => ({ payload, type: SEAR
 export default function reducer(statePart = '', action = {}) {
   switch (action.type) {
     case SEARCH_CARD:
-      return [ action.payload];
+      return  action.payload;
     default:
       return statePart;
   }

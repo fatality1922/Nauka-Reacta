@@ -4,7 +4,7 @@ import { createAction_changeSearchString } from '../../redux/searchStringRedux';
 import SearchResults from './SearchResults';
 
 const mapStateToProps = (state, props) => {
-  const {searchString} = props.match.params.searchString;
+  const {searchString} = props.match.params;
   return {
     searchString,
     cards: getCardsForSearchResults(state, props.match.params.searchString),
