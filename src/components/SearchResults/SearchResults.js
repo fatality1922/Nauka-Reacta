@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Card from '../Card/Card.js';
 import { settings } from '../../data/dataStore';
 import Icon from '../Icon/Icon.js';
+import Container from '../Container/Container';
 
 
 class SearchResults extends React.Component {
@@ -21,28 +22,30 @@ class SearchResults extends React.Component {
   }
 
   componentDidMount() {
-    const {changeSearchString, searchString } = this.props;
+    const { changeSearchString, searchString } = this.props;
     changeSearchString(searchString);
   }
-  
+
   render() {
-    const { icon, cards, children} = this.props;
+    const { icon, cards, children } = this.props;
     return (
-      <section className={styles.component}>
+      <Container>
+        <section className={styles.component}>
 
-        {children}
+          {children}
 
-        <div className={styles.icon}>
-          <Icon name={icon} />
-        </div>
+          <div className={styles.icon}>
+            <Icon name={icon} />
+          </div>
 
-        <div>
-          {cards.map(cardData => (
-            <Card key={cardData.id} {...cardData} />
-          ))}
-        </div>
+          <div>
+            {cards.map(cardData => (
+              <Card key={cardData.id} {...cardData} />
+            ))}
+          </div>
 
-      </section>
+        </section>
+      </Container>
     );
   }
 }
